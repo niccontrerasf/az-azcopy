@@ -9,4 +9,4 @@ RUN wget -O ${TMPDIR}/azcopy.tgz https://aka.ms/downloadazcopy-v10-linux && \
     $(tar tf ${TMPDIR}/azcopy.tgz | egrep -om1 "azcopy_linux_amd64_10.*\/azcopy") -C ${BINDIR}/ && \
     rm -f ${TMPDIR}/azcopy.tgz
 
-ENTRYPOINT ["bash"]
+CMD ["/bin/sh"]
